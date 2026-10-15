@@ -5,7 +5,13 @@ export function ScrollProgress() {
 
   return (
     <div className="progress-bar">
-      <div ref={progressRef} className="progress-fill" style={{ width: '0%' }} />
+      <div ref={progressRef} className="progress-fill" style={{ width: '0%' }}>
+        <span className="progress-spark" aria-hidden="true">
+          <span className="progress-spark-particle" />
+          <span className="progress-spark-particle" />
+          <span className="progress-spark-particle" />
+        </span>
+      </div>
     </div>
   )
 }
