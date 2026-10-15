@@ -44,7 +44,7 @@ export function useCustomCursor() {
     const onMouseLeaveLink = () => {
       ring.style.width = '32px'
       ring.style.height = '32px'
-      ring.style.borderColor = 'rgba(124, 106, 255, 0.4)'
+      ring.style.borderColor = 'var(--cursor-ring)'
     }
 
     document.addEventListener('mousemove', onMouseMove)
