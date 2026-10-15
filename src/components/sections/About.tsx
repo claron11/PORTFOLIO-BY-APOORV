@@ -7,7 +7,7 @@ export default function About() {
   return (
     <section id="about" className="section-padding" style={{ background: 'var(--color-bg-secondary)' }}>
       <div className="container-xl">
-        <div style={{
+        <div className="about-layout" style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
           gap: '5rem',
@@ -261,8 +261,16 @@ export default function About() {
               ))}
             </div>
 
-            {/* Beyond code */}
-            <div style={{
+          </motion.div>
+
+          {/* Beyond code */}
+          <motion.div
+            className="beyond-code-panel"
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportConfig}
+            style={{
               background: 'var(--color-bg-card)',
               border: '1px solid var(--color-border)',
               borderRadius: 'var(--radius-lg)',
@@ -313,7 +321,6 @@ export default function About() {
                   </div>
                 </a>
               </div>
-            </div>
           </motion.div>
         </div>
       </div>

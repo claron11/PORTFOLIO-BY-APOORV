@@ -493,6 +493,36 @@ html {
   background: linear-gradient(135deg, rgba(244, 114, 182, 0.12), rgba(255, 255, 255, 0.5) 65%);
 }
 
+@media (max-width: 767px) {
+  .about-layout {
+    row-gap: 2rem !important;
+  }
+}
+
+/* On laptop/desktop, creative work deserves a full-width row with both
+   disciplines side by side. Small screens retain the original stacked cards. */
+@media (min-width: 1024px) {
+  .about-layout {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    row-gap: 2rem !important;
+  }
+
+  .beyond-code-panel {
+    grid-column: 1 / -1;
+  }
+
+  .creative-showcase {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem !important;
+  }
+
+  .creative-link-card {
+    min-height: 132px;
+    padding: 1.25rem;
+  }
+}
+
 /* ─── Cursor ─────────────────────────────────────────────────── */
 .custom-cursor {
   position: fixed;
