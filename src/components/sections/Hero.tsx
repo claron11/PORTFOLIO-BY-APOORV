@@ -42,6 +42,10 @@ function HeroCanvas() {
     const draw = () => {
       t += 0.005
       ctx.clearRect(0, 0, width, height)
+      const isLightTheme = document.documentElement.getAttribute('data-theme') === 'light'
+      const networkOpacity = isLightTheme ? 0.2 : 0.12
+      const shapeOpacity = isLightTheme ? 0.25 : 0.12
+      const particleOpacityBoost = isLightTheme ? 1.4 : 1.15
 
       // Draw connections
       for (let i = 0; i < particles.length; i++) {
@@ -51,8 +55,8 @@ function HeroCanvas() {
           const dist = Math.sqrt(dx * dx + dy * dy)
           if (dist < 150) {
             ctx.beginPath()
-            ctx.strokeStyle = `hsla(260, 70%, 70%, ${(1 - dist / 150) * 0.08})`
-            ctx.lineWidth = 0.5
+            ctx.strokeStyle = `hsla(260, 70%, ${isLightTheme ? '38%' : '70%'}, ${(1 - dist / 150) * networkOpacity})`
+            ctx.lineWidth = isLightTheme ? 0.75 : 0.5
             ctx.moveTo(particles[i].x, particles[i].y)
             ctx.lineTo(particles[j].x, particles[j].y)
             ctx.stroke()
@@ -71,7 +75,7 @@ function HeroCanvas() {
 
         ctx.beginPath()
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2)
-        ctx.fillStyle = `hsla(${p.hue}, 70%, 70%, ${p.opacity})`
+        ctx.fillStyle = `hsla(${p.hue}, 70%, ${isLightTheme ? '42%' : '70%'}, ${p.opacity * particleOpacityBoost})`
         ctx.fill()
       })
 
@@ -93,8 +97,10 @@ function HeroCanvas() {
           i === 0 ? ctx.moveTo(px, py) : ctx.lineTo(px, py)
         }
         ctx.closePath()
-        ctx.strokeStyle = `rgba(124, 106, 255, 0.08)`
-        ctx.lineWidth = 1
+        ctx.strokeStyle = isLightTheme
+          ? `rgba(61, 42, 165, ${shapeOpacity})`
+          : `rgba(124, 106, 255, ${shapeOpacity})`
+        ctx.lineWidth = isLightTheme ? 1.25 : 1
         ctx.stroke()
       })
 
@@ -209,7 +215,7 @@ export default function Hero() {
 
           {/* Name */}
           <motion.div variants={fadeUp}>
-            <h1 style={{
+            <h1 className="hero-name-glow" style={{
               fontFamily: 'var(--font-sans)',
               fontWeight: 900,
               fontSize: 'clamp(2.5rem, 8vw, 6.5rem)',

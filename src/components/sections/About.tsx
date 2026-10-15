@@ -277,8 +277,14 @@ export default function About() {
               }}>
                 Beyond Code
               </div>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+              <div className="creative-showcase" style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                <a
+                  className="creative-link-card"
+                  href="https://drive.google.com/drive/folders/19He3_N3heoBUL7uaiOaWTeE-bIZdToYD?usp=drive_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View Apoorv's photography on Instagram"
+                >
                   <Camera size={16} style={{ color: 'var(--color-accent)', marginTop: '0.1rem', flexShrink: 0 }} />
                   <div>
                     <div style={{ fontSize: '0.875rem', fontWeight: 500, color: 'var(--color-text-primary)' }}>
@@ -288,8 +294,14 @@ export default function About() {
                       Core member of JECRC University's official photography club
                     </div>
                   </div>
-                </div>
-                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+                </a>
+                <a
+                  className="creative-link-card"
+                  href="https://drive.google.com/drive/folders/1l46ctVZYBeRMH7eAaTr9biNsE1gljejT?usp=drive_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View Apoorv's visual design work"
+                >
                   <Palette size={16} style={{ color: 'var(--color-accent)', marginTop: '0.1rem', flexShrink: 0 }} />
                   <div>
                     <div style={{ fontSize: '0.875rem', fontWeight: 500, color: 'var(--color-text-primary)' }}>
@@ -299,7 +311,7 @@ export default function About() {
                       Designed visual content for real clients
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
           </motion.div>
