@@ -51,7 +51,7 @@ export const projects: Project[] = [
     description: "A premium restaurant landing page concept inspired by Jaipur's haveli architecture, blush pink, ivory, antique gold, and traditional jaali patterns. A design/development project showcasing editorial luxury UI.",
     category: 'design',
     role: 'Solo Designer & Developer',
-    timeline: '2026',
+    timeline: 'October 2026',
     status: 'completed',
     problem: 'Create a visually distinctive digital presence for a luxury Rajasthani dining concept that communicates opulence, heritage, and an exceptional culinary experience.',
     approach: "Drew inspiration from Jaipur's royal haveli aesthetic -- jaali latticework, blush pink and ivory palettes, antique gold accents, and refined editorial typography. Built with React, Vite, Tailwind CSS, and Framer Motion for smooth, immersive storytelling.",
