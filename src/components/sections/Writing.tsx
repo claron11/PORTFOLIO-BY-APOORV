@@ -174,7 +174,7 @@ export default function Writing() {
           }} className="section-description">
             Writing about frontend engineering, AI agents, and lessons learned while building real projects.
           </p>
-          {articles.some(a => a.draft) && (
+          {/*
             <p style={{
               marginTop: '0.75rem',
               fontFamily: 'var(--font-mono)',
@@ -183,7 +183,7 @@ export default function Writing() {
             }}>
               Articles marked as "Draft" are starter templates — replace content in <code style={{ color: 'var(--color-accent)' }}>src/data/articles.ts</code>
             </p>
-          )}
+          */}
         </motion.div>
 
         {/* Articles grid */}

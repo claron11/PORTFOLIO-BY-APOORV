@@ -88,7 +88,12 @@ export default function Skills() {
               </div>
 
               {/* Skills list */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.875rem' }}>
+              <div
+                className={`skills-list-scroll${category.skills.length > 5 ? ' has-overflow' : ''}`}
+                tabIndex={category.skills.length > 5 ? 0 : undefined}
+                aria-label={category.skills.length > 5 ? `${category.label} skills list` : undefined}
+                style={{ display: 'flex', flexDirection: 'column', gap: '0.875rem' }}
+              >
                 {category.skills.map(skill => {
                   const lvl = levelConfig[skill.level || 'familiar']
                   return (

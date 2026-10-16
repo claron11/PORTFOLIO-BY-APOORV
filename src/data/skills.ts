@@ -21,6 +21,8 @@ export const skillCategories: SkillCategory[] = [
     skills: [
       { name: 'C',   level: 'proficient' },
       { name: 'C++', level: 'proficient' },
+      { name: 'Java', level: 'familiar' },
+      { name: 'Python', level: 'familiar' },
     ],
   },
   {
@@ -30,6 +32,8 @@ export const skillCategories: SkillCategory[] = [
     skills: [
       { name: 'MySQL',      level: 'proficient' },
       { name: 'PostgreSQL', level: 'proficient' },
+      { name: 'MongoDB',    level: 'familiar' },
+      { name: 'Firebase',   level: 'familiar' },
     ],
   },
   {
@@ -55,6 +59,9 @@ export const skillCategories: SkillCategory[] = [
       { name: 'Google Cloud Platform',  level: 'familiar' },
       { name: 'Vercel',                 level: 'proficient' },
       { name: 'Render',                 level: 'proficient' },
+      { name: 'Antigravity',            level: 'proficient' },
+      { name: 'Cursor',                 level: 'proficient' },
+      { name: 'Trae',                   level: 'proficient' },
     ],
   },
   {
